@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://119.3.10.221:3306/QrcodeDemo?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: admin
+    password: Upc@CST2018
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+      enabled: true
+server:
+  port: 7654
+  tomcat:
+    uri-encoding: UTF-8
+  servlet:
+    context-path: /v0
