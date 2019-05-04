@@ -33,8 +33,13 @@ public class GoodsServiceImpl implements GoodsService {
     }
 
     @Override
-    public Page<Goods> GetGoodsList(Pageable pageable) {
+    public Page<Goods> GetGoodsListByPage(Pageable pageable) {
         return goodsRepository.getAllBy(pageable);
+    }
+
+    @Override
+    public List<Goods> GetGoodsList(){
+        return goodsRepository.findAll();
     }
 
     @Override

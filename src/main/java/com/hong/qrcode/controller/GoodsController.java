@@ -21,12 +21,17 @@ public class GoodsController {
         this.goodsService = goodsService;
     }
 
-    @GetMapping("/list")
+    @GetMapping("/list/page")
     public ResultVO GetGoodsList(
             @RequestParam(value = "page", defaultValue = "0") Integer page,
             @RequestParam(value = "size", defaultValue = "10") Integer size) {
         PageRequest request = PageRequest.of(page, size);
-        return ResultVO.success(goodsService.GetGoodsList(request));
+        return ResultVO.success(goodsService.GetGoodsListByPage(request));
+    }
+
+    @GetMapping("/list")
+    public ResultVO GetGoodsList() {
+        return ResultVO.success(goodsService.GetGoodsList());
     }
 
 
