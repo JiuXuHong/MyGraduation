@@ -16,10 +16,10 @@ public class GoodsForm {
     @JsonProperty(value = "name")
     private String name;
 
-    @JsonProperty(value = "username", defaultValue = "0")
+    @JsonProperty(value = "nums", defaultValue = "0")
     private Integer nums;
 
-    @JsonProperty(value = "username", defaultValue = "0")
+    @JsonProperty(value = "price", defaultValue = "0")
     private Integer price;
 
     @JsonProperty(value = "description")

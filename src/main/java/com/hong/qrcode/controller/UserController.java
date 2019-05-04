@@ -40,9 +40,9 @@ public class UserController {
         }
     }
 
-    @GetMapping("/test")
-    public ResultVO TestConnection() {
-        return ResultVO.success("haha");
+    @GetMapping("/list")
+    public ResultVO List() {
+        return ResultVO.success(userService.GetUserList());
     }
 }
 

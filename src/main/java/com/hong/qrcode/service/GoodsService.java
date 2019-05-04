@@ -10,7 +10,9 @@ import java.util.List;
 
 public interface GoodsService {
 
-    Page<Goods> GetGoodsList(Pageable pageable);
+    Page<Goods> GetGoodsListByPage(Pageable pageable);
+
+    List<Goods> GetGoodsList();
 
     void AddGoodsToStock(List<GoodsForm> goodsList);
 
